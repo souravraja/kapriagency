@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'homepage/css/home.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="{% static 'homepage/js/home.js' %}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fa-solid fa-basket-shopping"></i>kapri <span>agency</span></a>
+        <nav class="navbar">
+            <a href="#">home</a>
+            <a href="#">features</a>
+            <a href="#">products</a>
+            <a href="#">reviews</a>
+            <a href="#">brand</a>
+            <a href="#">blog</a>
+        </nav>
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa-solid fa-magnifying-glass" id="search-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa fa-user" id="user-btn"></div>
+        </div>
+        <form action="" method="post" class="search-form">
+            <input type="text" id="search-box" name="searchitem" placeholder="search for">
+            <button type="submit" class="fa fa-search"></button>
+        </form>
+        <div class="shopping-card">
+            <div class="box">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/1470716/pexels-photo-1470716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="  ">
+                    <a href=""><i class="fa fa-trash"></i></a>
+                    
+                    <div class="content">
+                        <h3>watermelon</h3>
+                        <span class="price">5.99/-</span>
+                        <span class="quantity">Qty: 5</span>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/1470716/pexels-photo-1470716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="  ">
+                    <a href=""><i class="fa fa-trash"></i></a>
+                    
+                    <div class="content">
+                        <h3>watermelon</h3>
+                        <span class="price">5.99/-</span>
+                        <span class="quantity">QTY:5</span>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/1470716/pexels-photo-1470716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="  ">
+                    <a href=""><i class="fa fa-trash"></i></a>
+                    
+                    <div class="content">
+                        <h3>watermelon</h3>
+                        <span class="price">5.99/-</span>
+                        <span class="quantity">QTY:5</span>
+                    </div>
+                </a>
+            </div>
+            <div class="total">total:$324</div>
+            <a href="#" class="btn">Checkout</a>
+        </div>
+    </header>
+    <!-- banner section  -->
+     <section class="home" id="home">
+        <div class="content">
+            <h3>Retail and <span>Wholsale</span> product for you</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit nam maiores dolore.
+            </p>
+            <a href="#" class="btn">shop</a>
+        </div>
+     </section>
+     <!-- our features section  -->
+      <section class="features" id="features">
+        <h1 class="heading">OUR <span>Features</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="https://img.freepik.com/premium-vector/easy-returns-sign-label-delivery-service-vector-stock-illustration_100456-11334.jpg" alt="">
+                <h3>easy return</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, assumenda at distinctio </p>
+                <a href="" class="btn">Read more</a>
+            </div>
+            <div class="box">
+                <img src="https://m.economictimes.com/thumb/msid-83058184,width-1200,height-900,resizemode-4,imgsize-47252/cod-istock.jpg" alt="">
+                <h3>cash on delivery</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, assumenda at distinctio </p>
+                <a href="" class="btn">Read more</a>
+            </div>
+            <div class="box">
+                <img src="https://www.ithinklogistics.com/blog/wp-content/uploads/2021/05/asset-14-4-x.png" alt="">
+                <h3>Door delivery</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, assumenda at distinctio </p>
+                <a href="" class="btn">Read more</a>
+            </div>
+        </div>
+      </section>
+      <section class="categories" id="categories">
+        <h1 class="heading">our <span>Categories</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
+                <h3>Vagitable</h3>
+                <p>Upto 45% off</p>
+                <a href="#" class="btn">Shop now</a>
+            </div>
+            <div class="box">
+                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
+                <h3>Vagitable</h3>
+                <p>Upto 45% off</p>
+                <a href="#" class="btn">Shop now</a>
+            </div>
+            <div class="box">
+                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
+                <h3>Vagitable</h3>
+                <p>Upto 45% off</p>
+                <a href="#" class="btn">Shop now</a>
+            </div>
+            <div class="box">
+                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
+                <h3>Vagitable</h3>
+                <p>Upto 45% off</p>
+                <a href="#" class="btn">Shop now</a>
+            </div>
+            <div class="box">
+                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
+                <h3>Vagitable</h3>
+                <p>Upto 45% off</p>
+                <a href="#" class="btn">Shop now</a>
+            </div>
+            <div class="box">
+                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
+                <h3>Vagitable</h3>
+                <p>Upto 45% off</p>
+                <a href="#" class="btn">Shop now</a>
+            </div>
+        </div>
+      </section>
+
+        <section class="products" id="products">
+            <h1 class="heading">our <span>Products</span></h1>
+            <div class="product-slider swiper ">
+                <div class="swiper-wrapper wrapper">
+                    <div class="box swiper-slide">
+                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
+                        <h3>Fress orange</h3>
+                        <div class="price">$12.99/- -$15.99/-</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <a href="#" class="btn">add to card</a>
+                    </div>
+                    <div class="box swiper-slide">
+                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
+                        <h3>Fress orange</h3>
+                        <div class="price">$12.99/- -$15.99/-</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <a href="#" class="btn">add to card</a>
+                    </div>
+                    <div class="box swiper-slide">
+                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
+                        <h3>Fress orange</h3>
+                        <div class="price">$12.99/- -$15.99/-</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <a href="#" class="btn">add to card</a>
+                    </div>
+                    <div class="box swiper-slide">
+                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
+                        <h3>Fress orange</h3>
+                        <div class="price">$12.99/- -$15.99/-</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <a href="#" class="btn">add to card</a>
+                    </div>
+                    <div class="box swiper-slide">
+                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
+                        <h3>Fress orange</h3>
+                        <div class="price">$12.99/- -$15.99/-</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <a href="#" class="btn">add to card</a>
+                    </div>
+                    <div class="box swiper-slide">
+                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
+                        <h3>Fress orange</h3>
+                        <div class="price">$12.99/- -$15.99/-</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <a href="#" class="btn">add to card</a>
+                    </div>
+                </div>
+            </div>
+      </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</html>
