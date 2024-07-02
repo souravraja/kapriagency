@@ -12,6 +12,8 @@ OurProductType=(
 
 class OurWorkingCompany(models.Model):
     companyName=models.CharField(max_length=433,default=None)
+    def __str__(self):
+        return str(self.companyName)
 
  
 

@@ -10,3 +10,6 @@ def companyname(request):
 
 def home(request):
     return render(request,'productlist/home/home.html')
+
+def productitem(request):
+    return render(request,'productlist/home/productlist.html')

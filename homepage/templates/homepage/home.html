@@ -5,28 +5,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}Kapri agency{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'homepage/css/home.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="{% static 'homepage/js/home.js' %}" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
     <link
   rel="stylesheet"
-  href="https://unpkg.com/swiper@11/swiper-bundle.min.css"
-/>
+  href="https://unpkg.com/swiper@11/swiper-bundle.min.css"/>
+
+    {% block style %}{% endblock style %}
 </head>
 
 <body>
     <header class="header">
         <a href="#" class="logo"><i class="fa-solid fa-basket-shopping"></i>kapri <span>agency</span></a>
         <nav class="navbar">
-            <a href="#">home</a>
+            <a href="{% url 'home' %}">home</a>
             <a href="#">features</a>
-            <a href="#">products</a>
+            <a href="{% url 'productitem' %}">products</a>
             <a href="#">reviews</a>
-            <a href="#">brand</a>
+            <a href="{% url 'companyname' %}">brand</a>
             <a href="#">blog</a>
         </nav>
         <div class="icons">
@@ -81,6 +80,7 @@
         </div>
     </header>
     <!-- banner section  -->
+    {% block content %}
      <section class="home" id="home">
         <div class="content">
             <h3>Retail and <span>Wholsale</span> product for you</h3>
@@ -113,6 +113,9 @@
             </div>
         </div>
       </section>
+ 
+      <!-- catagory -->
+
       <section class="categories" id="categories">
         <h1 class="heading">our <span>Categories</span></h1>
         <div class="box-container">
@@ -154,7 +157,7 @@
             </div>
         </div>
       </section>
-
+         <!-- product  -->
         <section class="products" id="products">
             <h1 class="heading">our <span>Products</span></h1>
             <div class="product-slider swiper ">
@@ -240,6 +243,7 @@
                 </div>
             </div>
       </section>
+      {% endblock content %}
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
