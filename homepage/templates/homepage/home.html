@@ -24,60 +24,22 @@
             <a href="{% url 'home' %}">home</a>
             <a href="#">features</a>
             <a href="{% url 'productitem' %}">products</a>
-            <a href="#">reviews</a>
+            <a href="{% url 'catagory' %}">catagory</a>
             <a href="{% url 'companyname' %}">brand</a>
             <a href="#">blog</a>
         </nav>
         <div class="icons">
             <div class="fa fa-bars" id="menu-btn"></div>
             <div class="fa-solid fa-magnifying-glass" id="search-btn"></div>
-            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <a href="{% url 'cart' %}"><div class="fa fa-shopping-cart" id="cart-btn"></div></a>
+            
             <div class="fa fa-user" id="user-btn"></div>
         </div>
         <form action="" method="post" class="search-form">
             <input type="text" id="search-box" name="searchitem" placeholder="search for">
             <button type="submit" class="fa fa-search"></button>
         </form>
-        <div class="shopping-card">
-            <div class="box">
-                <a href="#">
-                    <img src="https://images.pexels.com/photos/1470716/pexels-photo-1470716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="  ">
-                    <a href=""><i class="fa fa-trash"></i></a>
-                    
-                    <div class="content">
-                        <h3>watermelon</h3>
-                        <span class="price">5.99/-</span>
-                        <span class="quantity">Qty: 5</span>
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="#">
-                    <img src="https://images.pexels.com/photos/1470716/pexels-photo-1470716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="  ">
-                    <a href=""><i class="fa fa-trash"></i></a>
-                    
-                    <div class="content">
-                        <h3>watermelon</h3>
-                        <span class="price">5.99/-</span>
-                        <span class="quantity">QTY:5</span>
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="#">
-                    <img src="https://images.pexels.com/photos/1470716/pexels-photo-1470716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="  ">
-                    <a href=""><i class="fa fa-trash"></i></a>
-                    
-                    <div class="content">
-                        <h3>watermelon</h3>
-                        <span class="price">5.99/-</span>
-                        <span class="quantity">QTY:5</span>
-                    </div>
-                </a>
-            </div>
-            <div class="total">total:$324</div>
-            <a href="#" class="btn">Checkout</a>
-        </div>
+        
     </header>
     <!-- banner section  -->
     {% block content %}
@@ -119,42 +81,15 @@
       <section class="categories" id="categories">
         <h1 class="heading">our <span>Categories</span></h1>
         <div class="box-container">
+            {% for catagory in catagor %}
             <div class="box">
                 <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
-                <h3>Vagitable</h3>
+                <h3>{{catagory.name}}</h3>
                 <p>Upto 45% off</p>
                 <a href="#" class="btn">Shop now</a>
             </div>
-            <div class="box">
-                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
-                <h3>Vagitable</h3>
-                <p>Upto 45% off</p>
-                <a href="#" class="btn">Shop now</a>
-            </div>
-            <div class="box">
-                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
-                <h3>Vagitable</h3>
-                <p>Upto 45% off</p>
-                <a href="#" class="btn">Shop now</a>
-            </div>
-            <div class="box">
-                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
-                <h3>Vagitable</h3>
-                <p>Upto 45% off</p>
-                <a href="#" class="btn">Shop now</a>
-            </div>
-            <div class="box">
-                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
-                <h3>Vagitable</h3>
-                <p>Upto 45% off</p>
-                <a href="#" class="btn">Shop now</a>
-            </div>
-            <div class="box">
-                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
-                <h3>Vagitable</h3>
-                <p>Upto 45% off</p>
-                <a href="#" class="btn">Shop now</a>
-            </div>
+            {% endfor %}
+        
         </div>
       </section>
          <!-- product  -->
@@ -162,9 +97,10 @@
             <h1 class="heading">our <span>Products</span></h1>
             <div class="product-slider swiper ">
                 <div class="swiper-wrapper wrapper">
+                    {% for product in product %}
                     <div class="box swiper-slide">
-                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
-                        <h3>Fress orange</h3>
+                        <img src="{{product.product_img.url}}" alt="product">
+                        <h3>{{product.title}}</h3>
                         <div class="price">$12.99/- -$15.99/-</div>
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -175,71 +111,7 @@
                         </div>
                         <a href="#" class="btn">add to card</a>
                     </div>
-                    <div class="box swiper-slide">
-                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
-                        <h3>Fress orange</h3>
-                        <div class="price">$12.99/- -$15.99/-</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half"></i>
-                        </div>
-                        <a href="#" class="btn">add to card</a>
-                    </div>
-                    <div class="box swiper-slide">
-                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
-                        <h3>Fress orange</h3>
-                        <div class="price">$12.99/- -$15.99/-</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half"></i>
-                        </div>
-                        <a href="#" class="btn">add to card</a>
-                    </div>
-                    <div class="box swiper-slide">
-                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
-                        <h3>Fress orange</h3>
-                        <div class="price">$12.99/- -$15.99/-</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half"></i>
-                        </div>
-                        <a href="#" class="btn">add to card</a>
-                    </div>
-                    <div class="box swiper-slide">
-                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
-                        <h3>Fress orange</h3>
-                        <div class="price">$12.99/- -$15.99/-</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half"></i>
-                        </div>
-                        <a href="#" class="btn">add to card</a>
-                    </div>
-                    <div class="box swiper-slide">
-                        <img src="https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="product">
-                        <h3>Fress orange</h3>
-                        <div class="price">$12.99/- -$15.99/-</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half"></i>
-                        </div>
-                        <a href="#" class="btn">add to card</a>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
       </section>

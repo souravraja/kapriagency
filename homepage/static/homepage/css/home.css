@@ -117,7 +117,7 @@ section{
     right: 2rem;
     transition: .4 linear;
 }
-
+ 
 .header .search-form{
     border: 1px solid black;
     position: absolute;
@@ -303,8 +303,8 @@ section{
 }
 
 .products .product-slider .wrapper .box img{
-    width: 15rem;
-    height: 15rem;
+    width: 17rem;
+    height: 25rem;
 }
 
 .products .product-slider{

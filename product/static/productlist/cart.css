@@ -1,0 +1,15 @@
+.box .img img{
+    width: 12rem;
+    height: 15rem;
+    background-color: red;
+}
+.shopping-card{
+    text-align: center;
+    margin: 7rem 9rem;
+    background-color: aqua;
+}
+.box  {
+
+    display: flex;
+    
+}

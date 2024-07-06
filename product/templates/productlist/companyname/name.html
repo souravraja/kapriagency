@@ -1,0 +1,17 @@
+
+{% extends "homepage/home.html" %}
+{% load static %}
+{% block title %}all product{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'productlist/name.css' %}">
+{% endblock style %}
+{% block content %}
+<section class="categories categoriese" id="categories">
+    <h1 class="heading">our <span>company</span></h1>
+    <h2 class="listofcompanyname">
+        {% for i in company %}
+            <a href="{% url 'productitembybrant' i.id %}"  rel="noopener noreferrer">{{i.companyName}}</a>
+        {% endfor %}
+    </h2>
+</section>
+{% endblock %}
