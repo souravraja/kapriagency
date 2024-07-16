@@ -4,8 +4,9 @@ from product.models import Product,productCatagory
 def home(request):
     products=Product.objects.all()
     catagory= productCatagory.objects.order_by('?')[:6]
-
-
+    for i in catagory:
+        print(i.name)
+        print(i.img)
     context={
         'product': products,
         'catagor':catagory

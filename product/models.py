@@ -11,7 +11,7 @@ class OurWorkingCompany(models.Model):
 
 class productCatagory(models.Model):
     name=models.CharField(max_length=100,default=1,blank=True,null=True)
-    catagory_img=models.ImageField(upload_to='productCatagory',default=None,blank=True,null=True)
+    img=models.ImageField(upload_to='productCatagory',default=None,blank=True,null=True)
     def __str__(self):
         return str(self.name)
 

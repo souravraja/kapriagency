@@ -83,9 +83,9 @@
         <div class="box-container">
             {% for catagory in catagor %}
             <div class="box">
-                <img src="https://e7.pngegg.com/pngimages/609/961/png-clipart-vegetables-vegetable-vegetarian-cuisine-cooking-food-health-vegetables-natural-foods-leaf-vegetable.png" alt="">
+                <img src="{{catagory.img.url}}" alt="product">
                 <h3>{{catagory.name}}</h3>
-                <p>Upto 45% off</p>
+                <p>Upto 25% off</p>
                 <a href="#" class="btn">Shop now</a>
             </div>
             {% endfor %}
