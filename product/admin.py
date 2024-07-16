@@ -16,7 +16,7 @@ class ourworkingcompanyAdmin(admin.ModelAdmin):
     
 @admin.register(productCatagory)
 class ourworkingcompanyAdmin(admin.ModelAdmin):
-    list_display=['id','name']
+    list_display=['id','name','img']
 
 
 @admin.register(OrderPlaced)
